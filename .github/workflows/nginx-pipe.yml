@@ -38,4 +38,6 @@ jobs:
           HOST: ec2-3-111-214-63.ap-south-1.compute.amazonaws.com
           USER: ubuntu
         run: |
-          sudo systemctl reload nginx
+          sudo service nginx start
+          sudo service nginx stop
+          sudo service nginx restart
