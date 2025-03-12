@@ -18,8 +18,8 @@ jobs:
           PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           HOST: ec2-3-111-214-63.ap-south-1.compute.amazonaws.com
           USER: ubuntu
-        run: | 
-          cd repo
+        run: |
+          rm *
           git clone https://github.com/Kunal-Yelekar/bitztransights.git
 
       - name: deploy the file in NGINX
