@@ -39,5 +39,3 @@ jobs:
           USER: ubuntu
         run: |
           sudo service nginx start
-          sudo service nginx stop
-          sudo service nginx restart
