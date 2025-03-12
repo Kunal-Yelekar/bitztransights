@@ -30,7 +30,7 @@ jobs:
           HOST: ec2-3-111-214-63.ap-south-1.compute.amazonaws.com
           USER: ubuntu
         run: |
-          sudo cp /home/ubuntu/bitztransights/kunal.html /usr/share/nginx/html/
+          sudo cp ./bitztransights/kunal.html /usr/share/nginx/html/
 
       - name: restart the NGINX
         env:
