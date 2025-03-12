@@ -18,8 +18,8 @@ jobs:
       - name: clone the repo
         env:
           PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          HOST: ${{ ec2-3-111-214-63.ap-south-1.compute.amazonaws.com }}
-          USER: ${{ ubuntu }}
+          HOST: ec2-3-111-214-63.ap-south-1.compute.amazonaws.com
+          USER: ubuntu
         run: | 
           git clone https://github.com/Kunal-Yelekar/bitztransights.git
 
@@ -27,15 +27,15 @@ jobs:
       - name: deploy the file in NGINX
         env:
           PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          HOST: ${{ ec2-3-111-214-63.ap-south-1.compute.amazonaws.com }}
-          USER: ${{ ubuntu }}
+          HOST: ec2-3-111-214-63.ap-south-1.compute.amazonaws.com
+          USER: ubuntu
         run: |
           sudo cp /home/ubuntu/bitztransights/kunal.html /usr/share/nginx/html/
 
       - name: restart the NGINX
         env:
           PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          HOST: ${{ ec2-3-111-214-63.ap-south-1.compute.amazonaws.com }}
-          USER: ${{ ubuntu }}
+          HOST: ec2-3-111-214-63.ap-south-1.compute.amazonaws.com
+          USER: ubuntu
         run: |
           sudo systemctl reload nginx
